@@ -1,0 +1,8 @@
+<h1>Table of Contents</h1>
+<ul>
+  @for (chapter of chapters; track chapter.id) { <!--loops through all the chapters in the Chapter array. Track keeps track of the chapter id so that it can modify the list when we add more without having to rerender every time -->
+    <li>
+      <a [routerLink]="['/chapter', chapter.id]">{{ chapter.title }}</a> <!--this is where routerlink does its thing and builds a url for each chapter -->
+    </li>
+  }
+</ul>
